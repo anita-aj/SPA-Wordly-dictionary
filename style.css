@@ -1,0 +1,20 @@
+/*Books background picture*/
+body{
+    background-image: url('Pic 1.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    background-color: #d6c1a0;
+    background-blend-mode:multiply;
+}
+
+
+
+/*Custom animations*/
+@keyframes fade-in{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+.fade-in{
+    animation:fade-in 2s ease-out;
+}

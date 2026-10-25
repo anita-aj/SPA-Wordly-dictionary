@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordly Dictionary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main class="mx-auto my-6 max-w-xl rounded bg-white/90 p-4">
+        <h1 class="mb-4 text-3xl font-bold italic">Wordly Dictionary</h1>
+
+        <!--Form for searching-->
+<form id="form" class="flex gap-5 ">
+
+    
+    <input id="search-input" type="text" placeholder="Search for a word"  aria-label="Search for a word" class="flex-1 rounded border px-3 py-2">
+    <button type="submit" class="rounded bg-amber-100 px-4 py-2 text-gray-900 hover:bg-[#e8d8bd]">Search</button>
+
+</form>
+
+<!--Error messages-->
+<p id="error-message" class="mt-4 hidden text-red-600" role="alert"></p>
+
+<!--Result of the search-->
+<section id="search-result" class="mt-6 rounded border hidden p-4 fade-in">
+    
+    <div class="flex justify-between">
+        <h2 id="word" class="text-xl font-bold"></h2>
+        <button id="favourite-button" class="rounded border px-3 py-1 hover:bg-yellow-100">&#10084; Favorite</button>
+    </div>
+   
+    <button id="pronunciation-button" class="mt-2 rounded border px-3 py-1 hover:bg-gray-100"> &#128066; Pronunciation</button>
+
+    <div id="meanings"></div>
+    <h3 class="mt-4 font-semibold">Synonyms</h3>
+    <p id="synonyms"></p>
+    <p class="mt-4 text-sm"> Source: <a id="source" target="_blank" rel= "noopener noreferer" class="text-blue-700 underline"></a></p>
+
+</section>
+
+<!--Favorite words-->
+<section class="mt-8">
+    <h2 class="text-lg font-bold">Favourite Words</h2>
+    <p id="no-favourites">You haven't saved any word yet : )</p>
+    <ul id="favourites" class="mt-2 space-y-2"></ul>
+</section>
+    </main>
+    
+</body>
+</html>
